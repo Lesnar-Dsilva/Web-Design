@@ -1,0 +1,399 @@
+body {
+  background-color: black;
+  margin: 0px;
+}
+
+#output {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  background-color: black;
+  color: white;
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  border: none;
+}
+
+#acBtn {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 240px;
+  left: 75px;
+  font-size: 80px;
+  padding: 12px 60px 12px 60px;
+  border-radius: 100px;
+  color: white;
+}
+
+#acBtn:hover {
+  color: black;
+  background-color: white;
+}
+
+#percentage {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 240px;
+  left: 350px;
+  font-size: 80px;
+  padding: 14px 25px 14px 25px;
+  border-radius: 100px;
+  color: white;
+}
+
+#percentage:hover {
+  color: black;
+  background-color: white;
+}
+
+#addOrSubtract {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 240px;
+  left: 525px;
+  font-size: 70px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 100px;
+  color: white;
+}
+
+#addOrSubtract:hover {
+  color: black;
+  background-color: white;
+}
+
+#division {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 240px;
+  left: 700px;
+  padding: 0px 45px 2px 45px;
+  border-radius: 100px;
+  color: white;
+}
+
+#division:hover {
+  color: black;
+  background-color: white;
+}
+
+#multiply {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 380px;
+  left: 700px;
+  padding: 0px 40px 2px 40px;
+  border-radius: 100px;
+  color: white;
+}
+
+#multiply:hover {
+  color: black;
+  background-color: white;
+}
+
+#subtract {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 520px;
+  left: 700px;
+  padding: 0px 40px 2px 40px;
+  border-radius: 100px;
+  color: white;
+}
+
+#subtract:hover {
+  color: black;
+  background-color: white;
+}
+
+#add {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 660px;
+  left: 700px;
+  padding: 0px 30px 2px 30px;
+  border-radius: 100px;
+  color: white;
+}
+
+#add:hover {
+  color: black;
+  background-color: white;
+}
+
+#decimalPoint {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 800px;
+  left: 525px;
+  padding: 0px 42px 0px 42px;
+  border-radius: 100px;
+  color: white;
+}
+
+#decimalPoint:hover {
+  color: black;
+  background-color: white;
+}
+
+#num1 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 660px;
+  left: 75px;
+  font-size: 80px;
+  padding: 12px 90px 12px 90px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num1:hover {
+  color: black;
+  background-color: white;
+}
+
+#num2 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 660px;
+  left: 350px;
+  font-size: 80px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num2:hover {
+  color: black;
+  background-color: white;
+}
+
+#num3 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 660px;
+  left: 525px;
+  font-size: 80px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num3:hover {
+  color: black;
+  background-color: white;
+}
+
+#num4 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 520px;
+  left: 75px;
+  font-size: 80px;
+  padding: 12px 90px 12px 90px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num4:hover {
+  color: black;
+  background-color: white;
+}
+
+#num5 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 525px;
+  left: 350px;
+  font-size: 80px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num5:hover {
+  color: black;
+  background-color: white;
+}
+
+#num6 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 520px;
+  left: 525px;
+  font-size: 80px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num6:hover {
+  color: black;
+  background-color: white;
+}
+
+#num7 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 380px;
+  left: 75px;
+  font-size: 80px;
+  padding: 12px 90px 12px 90px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num7:hover {
+  color: black;
+  background-color: white;
+}
+
+#num8 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 380px;
+  left: 350px;
+  font-size: 80px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num8:hover {
+  color: black;
+  background-color: white;
+}
+
+#num9 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 380px;
+  left: 525px;
+  font-size: 80px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num9:hover {
+  color: black;
+  background-color: white;
+}
+
+#num0 {
+  background-color: grey;
+  font-size: 100px;
+  position: absolute;
+  top: 800px;
+  left: 75px;
+  font-size: 80px;
+  padding: 12px 170px 12px 170px;
+  border-radius: 100px;
+  color: white;
+}
+
+#num0:hover {
+  color: black;
+  background-color: white;
+}
+
+#equal {
+  background-color: orange;
+  font-size: 100px;
+  position: absolute;
+  top: 800px;
+  left: 700px;
+  padding: 0px 30px 0px 30px;
+  border-radius: 100px;
+  color: white;
+}
+
+#equal:hover {
+  color: black;
+  background-color: white;
+}
+
+@media screen and (min-width: 1900px) {
+  #output {
+    left: 35%;
+    max-width: 500px;
+  }
+  #acBtn {
+    left: 35%;
+  }
+  #percentage {
+    left: 48%;
+  }
+  #addOrSubtract {
+    left: 55.5%;
+  }
+  #division {
+    left: 63%;
+  }
+  #multiply {
+    left: 63%;
+  }
+  #subtract {
+    left: 63%;
+  }
+  #add {
+    left: 63%;
+  }
+  #equal {
+    left: 63%;
+  }
+  #decimalPoint {
+    left: 55.5%;
+  }
+  #num1 {
+    left: 35%;
+  }
+  #num2 {
+    left: 48%;
+  }
+  #num3 {
+    left: 55.5%;
+  }
+  #num4 {
+    left: 35%;
+  }
+  #num5 {
+    left: 48%;
+  }
+  #num6 {
+    left: 55.5%;
+  }
+  #num7 {
+    left: 35%;
+  }
+  #num8 {
+    left: 48%;
+  }
+  #num9 {
+    left: 55.5%;
+  }
+  #num0 {
+    left: 35%;
+  }
+}

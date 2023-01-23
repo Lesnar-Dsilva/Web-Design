@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" , initial scale="1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main id="main-content">
+      <div id="calculator">
+        <header id="title">
+          <h1>Tip Calculator</h1>
+        </header>
+
+        <form id="mainCalculator">
+          <label for="totalBill">Total Bill</label>
+          <input id="totalBill" type="text" />
+
+          <label for="numberOfGuests">Number of Guests</label>
+          <input id="numberOfGuests" type="text" />
+
+          <label for="gradeService">Grade Service</label>
+          <select name="gradeService" id="gradeService">
+            <option value="0.3">30% Excellent Service!</option>
+            <option value="0.25">25% Great Service</option>
+            <option value="0.2">20% Good Service</option>
+            <option value="0.15">15% Fair Service</option>
+            <option value="0.1">10% Limited Service</option>
+            <option value="0.05">5% Weak Service</option>
+            <option value="You cruel human being!">0% Abysmmal Service</option>
+          </select>
+          <input id="calculate" type="submit" value="Calculate" />
+        </form>
+        <span id="result"></span>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: teal;
+}
+::-webkit-scrollbar-thumb {
+  background: tomato;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: violet;
+}
+::-webkit-scrollbar-track:hover {
+  background: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+}
+
+.imgContainer {
+  padding-right: 2rem;
+  background-color: black;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  padding-right: 2rem;
+  background-color: black;
+}
+
+.links > li > a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+.landscape {
+  width: 100%;
+  grid-column: 1/35;
+  grid-row: 1/5;
+  object-fit: cover;
+  height: 100%;
+}
+
+.banner {
+  display: grid;
+}
+
+.banner > .exploreBtn > a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.banner > .exploreBtn > a:hover {
+  color: black;
+}
+
+.banner > .exploreBtn {
+  grid-column: 16/20;
+  grid-row: 2/4;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 2rem;
+  outline: white 3px solid;
+}
+
+.banner > .exploreBtn:hover {
+  background-color: white;
+  outline: black 3px solid;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+#explore {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: rgba(156, 156, 156, 0.507);
+  border-radius: 1rem 1rem 0rem 0rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+main > div > p {
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.exploreContainer {
+  background-color: rgb(116, 116, 116);
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+}
+
+#about {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: rgba(156, 156, 156, 0.507);
+  border-radius: 1rem 1rem 0rem 0rem;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.aboutContainer {
+  background-color: rgb(116, 116, 116);
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+}
+
+#tours {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: rgba(156, 156, 156, 0.507);
+  border-radius: 1rem 1rem 0rem 0rem;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.toursContainer {
+  background-color: rgb(116, 116, 116);
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.upArrow {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  padding: 0.5rem;
+  color: rgb(0, 38, 255);
+  font-size: 2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5rem;
+}
+
+footer {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: rgb(60, 94, 94);
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0%;
+}
+
+.toggleBtn {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar.toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imgContainer {
+    padding: 0;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .imgContainer.toggle {
+    padding: 0% 100%;
+    width: 25%;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+  .toggleBtn {
+    display: block;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .links {
+    padding: 0%;
+  }
+  .links > li {
+    padding: 0%;
+    visibility: hidden;
+  }
+  .links.toggle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links.toggle > li {
+    visibility: visible;
+    margin-bottom: 2rem;
+  }
+  .banner {
+    margin-top: 5rem;
+  }
+}

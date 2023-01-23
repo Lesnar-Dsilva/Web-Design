@@ -1,0 +1,91 @@
+body {
+  background-color: black;
+}
+
+#reviewText {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  position: absolute;
+  left: 780px;
+  top: 15px;
+}
+
+#commentor {
+  position: absolute;
+  left: 900px;
+  top: 200px;
+  border-radius: 1000px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: drop-shadow(8px 5px green);
+}
+
+#quote {
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  position: absolute;
+  left: 885px;
+  top: 200px;
+  object-fit: cover;
+}
+
+#name {
+  color: rgba(0, 255, 234, 0.39);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: absolute;
+  top: 400px;
+  left: 915px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+#jobPosition {
+  color: rgb(0, 102, 255);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 440px;
+  left: 920px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 110px;
+}
+
+#comment {
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: 500px;
+  left: 630px;
+  width: 700px;
+  color: rgb(0, 174, 255);
+  text-align: center;
+  line-height: 30px;
+}
+
+#prev {
+  position: absolute;
+  top: 500px;
+  left: 500px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 50px;
+}
+
+#next {
+  position: absolute;
+  top: 500px;
+  left: 1400px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 50px;
+}

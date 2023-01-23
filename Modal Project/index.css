@@ -1,0 +1,148 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-image: url("Living room.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header {
+  display: block;
+  padding: 15rem 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.hideHeader {
+  display: none;
+}
+
+.headerContainer {
+  background-color: rgba(0, 0, 0, 0.753);
+  width: 40%;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 0.2rem;
+  margin: auto;
+}
+
+body > header > div > h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  font-weight: 100;
+}
+
+.toggleBtn {
+  background-color: rgb(0, 255, 255);
+  border: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.modalOverlay {
+  display: none;
+  height: 100%;
+}
+
+.showOverlay {
+  display: block;
+  z-index: 1;
+  background-color: rgba(0, 128, 128, 0.151);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 15%;
+}
+
+.modalContent {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  text-align: center;
+  border-radius: 0.2rem;
+  padding-bottom: 3rem;
+  margin: auto;
+  flex-direction: column;
+}
+
+body > div > div > p {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.closeBtn {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 3rem;
+  align-self: flex-end;
+  margin-right: 0.2rem;
+}
+
+.closeBtn:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 321px) {
+  body {
+    width: 320px;
+    background-size: 2000%;
+    background-position: center top;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  body {
+    width: 378px;
+    background-size: auto;
+    background-position: center top;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    width: 425px;
+    background-size: auto;
+    background-position: center top;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  body {
+    width: 768px;
+    background-size: auto;
+    background-position: center top;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    width: 1024px;
+    background-size: auto;
+    background-position: center top;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    width: 1440px;
+    background-size: auto;
+    background-position: center top;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  body {
+    width: 2560px;
+    background-size: auto;
+    background-position: center top;
+  }
+}

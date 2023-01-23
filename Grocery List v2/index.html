@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html en="lang">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <section class="bg">
+      <div class="heading">
+        <h1 class="title">Grocery List</h1>
+      </div>
+      <div class="inputContainer">
+        <p class="alert"></p>
+        <form class="input">
+          <label for="grocery" class="label"></label>
+          <input
+            type="text"
+            id="grocery"
+            class="groceryInput"
+            placeholder="e.g. Eggs"
+          />
+          <input type="submit" class="gorceryAdd" id="groceryBtn" value="Add" />
+        </form>
+      </div>
+      <div class="groceryContainer">
+        <div class="groceryList"></div>
+        <button type="button" class="clearBtn">Clear Items</button>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>

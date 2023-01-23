@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 id="title" ontouchmove="myFunction(event)">Grocery List</h1>
+    <form id="form">
+      <label for="newItem"></label>
+      <input id="newItem" type="text" name="newItem" />
+      <input type="submit" id="submit" value="Add new item" />
+    </form>
+    <ul id="list">
+      <li id="No1">Eggs</li>
+      <li id="No2">Milk</li>
+      <li id="No3">Cheese</li>
+      <li id="No4">Bread</li>
+    </ul>
+    <script src="index.js"></script>
+  </body>
+</html>

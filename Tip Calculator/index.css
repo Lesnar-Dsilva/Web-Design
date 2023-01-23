@@ -1,0 +1,106 @@
+body {
+  background-color: black;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+}
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#calculator {
+  width: max-content;
+  background-color: white;
+  padding: 5% 5%;
+}
+
+#title {
+  padding-bottom: 5%;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainCalculator {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding-bottom: 5%;
+}
+
+#totalBill {
+  margin-bottom: 10%;
+  border: 2px solid green;
+  border-radius: 0px;
+  font-size: 100%;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#totalBill:focus {
+  border: 5px solid green;
+  outline: none;
+}
+
+#numberOfGuests {
+  margin-bottom: 10%;
+  border: 2px solid rgb(255, 0, 0);
+  font-size: 100%;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#numberOfGuests:focus {
+  outline: none;
+  border: 5px solid rgb(255, 102, 0);
+}
+
+#gradeService {
+  border: 2px solid rgb(0, 102, 255);
+  margin-bottom: 20%;
+  font-size: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#gradeService:focus {
+  border: 5px solid rgb(125, 115, 255);
+  border-radius: 0%;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+
+#calculate {
+  padding: 5% 5%;
+  font-size: 100%;
+  color: rgb(255, 255, 255);
+  background-color: grey;
+  border: none;
+  outline: none;
+}
+
+#calculate:hover {
+  transition-duration: 1s;
+  transition-property: background-color;
+  background-color: lightcoral;
+}
+
+#result {
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+  margin-top: 30%;
+  justify-content: center;
+  text-align: left;
+  height: 500%;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}

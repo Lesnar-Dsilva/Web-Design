@@ -1,0 +1,84 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+.bg {
+  z-index: 999;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader {
+  width: fit-content;
+  height: fit-content;
+}
+
+.videoContainer {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.title {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.541);
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  font-size: 3rem;
+}
+
+.switchBtn {
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
+  color: rgb(0, 81, 255);
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  border-radius: 0.2rem;
+}
+
+.switch {
+  z-index: 1;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: rgb(4, 0, 255);
+  position: absolute;
+  left: 0%;
+  transition-property: left;
+  transition-delay: 0.2s;
+  transition-duration: 1s;
+  border-radius: 0.2rem;
+}
+
+.slide {
+  transition-property: left;
+  transition-delay: 0.2s;
+  transition-duration: 1s;
+  left: 51%;
+}
+
+.switchBtn > span:nth-child(2) {
+  margin-right: 2rem;
+}

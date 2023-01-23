@@ -1,0 +1,95 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: rgb(218, 218, 218);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+  font-family: monospace;
+  margin: auto;
+  color: rgb(78, 109, 129);
+}
+
+.sectionCenter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 2rem;
+  background-color: white;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+  border-color: rgb(255, 208, 0);
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.questionTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.questionTitle > p {
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 1rem;
+}
+
+.questionBtn {
+  border: none;
+  background-color: transparent;
+}
+
+.plusIcon {
+  color: orange;
+  background-color: transparent;
+  font-size: 2rem;
+}
+
+.plusIcon > i:hover {
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transform: rotateZ(180deg);
+}
+
+.minusIcon {
+  color: orange;
+  background-color: transparent;
+  font-size: 2rem;
+  display: none;
+}
+
+.questionText {
+  display: none;
+}
+
+.showText .questionText {
+  display: block;
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.showText .minusIcon {
+  display: block;
+}
+
+.minusIcon > i:hover {
+  transform: rotateZ(90deg);
+  transition-property: transform;
+  transition-delay: 0.1s;
+  transition-duration: 0.4s;
+}
+
+.showText .plusIcon {
+  display: none;
+}
