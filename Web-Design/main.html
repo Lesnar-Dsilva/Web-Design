@@ -1,0 +1,170 @@
+<!-- Side content <aside> -->
+
+<!-- About page -->
+<!-- 2 Blog posts <article>, <time> element with datetime attribute -->
+<!-- Newsletter registration paper <form> -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Main Menu</title>
+    <link href="MABN.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- No nav is included on this page, because this whole page acts as a navigation menu for the viewer. -->
+    <!-- START Headline and Sub-headline -->
+    <section class="headSection">
+      <a href="main.html" class="altHome">
+        <div class="wholeLogo">
+          <div class="logoContainer">
+            <picture class="logoImage">
+              <img
+                src="Images/cogs.png"
+                alt="An image of cogs"
+                class="logoImg"
+              />
+            </picture>
+          </div>
+          <h1 class="headSection-h1 headline">Web Design</h1>
+        </div>
+      </a>
+      <div class="headSection-h1-div sub-headline">
+        <p class="headSection-h1-div-p sub-headline-p">
+          <span class="headSection-h1-div-p-span sub-headline-p-span"
+            >The term "web design" is used to describe the design process
+            relating to the front-end (client-side) design of a website. This
+            website acts as a starter kit.</span
+          >
+        </p>
+      </div>
+    </section>
+    <!-- END Headline and Sub-headline -->
+
+    <!-- START Main Menu -->
+    <section class="main">
+      <h2 class="navHeading">Navigation Menu</h2>
+      <div class="navMain">
+        <!-- START Blog page Option -->
+        <div class="blogPreviewText">
+          <div class="main-div blogPreview">
+            <a href="blog.html" class="blogLink">
+              <picture class="blogPageImage">
+                <img
+                  src="Images/accessories-text-editor.png"
+                  alt="Blog Page Image"
+                  class="blogPageImg"
+                />
+              </picture>
+            </a>
+          </div>
+          <div class="main-div blog">
+            <p class="main-div-p blog-blogPage">
+              <span class="main-div-p-span blog-blogPage-span">
+                <a href="blog.html" class="blogLink">Blog Page</a>
+              </span>
+            </p>
+          </div>
+        </div>
+        <!-- END Blog page Option -->
+
+        <!-- ******** Bears ********* -->
+        <!-- ******** beets ********* -->
+        <!-- * Battlestar Galactica * -->
+
+        <!-- START Newletter Sign Up page Option -->
+        <div class="signUpPreviewText">
+          <div class="main-div signUpPreview">
+            <a href="signUp.html" class="signUpLink">
+              <picture class="signUpImage">
+                <img
+                  src="Images/newsletter.png"
+                  alt="Sign Up Page Image"
+                  class="signUpImg"
+                />
+              </picture>
+            </a>
+          </div>
+          <div class="main-div signUp">
+            <p class="main-div-p signUp-signUpPage">
+              <span class="main-div-p-span signUp-signUpPage-span">
+                <a href="signUp.html" class="singUpLink"
+                  >Sign Up for the Newsletter</a
+                >
+              </span>
+            </p>
+          </div>
+        </div>
+        <!-- END Newletter Sign Up page Option -->
+
+        <!-- START About page Option -->
+        <div class="aboutPreviewText">
+          <div class="main-div aboutPreview">
+            <a href="about.html" class="aboutLink">
+              <picture class="aboutImage">
+                <img
+                  src="Images/profile.png"
+                  alt="About Page Image"
+                  class="aboutImg"
+                />
+              </picture>
+            </a>
+          </div>
+          <div class="main-div about">
+            <p class="main-div-p about-aboutPage">
+              <span class="main-div-p-span about-aboutPage-span">
+                <a href="about.html" class="aboutLink">About Page</a>
+              </span>
+            </p>
+          </div>
+        </div>
+        <!-- END About page Option -->
+      </div>
+    </section>
+    <!-- END Main Menu -->
+    <!-- START Aside Section -->
+    <section class="asideSection">
+      <h2 class="asideHeading">Related Content</h2>
+      <div class="asideMain">
+        <aside class="aside-1" aria-label="">
+          <span>
+            <a
+              data-height="500"
+              class="twitter-timeline"
+              href="https://twitter.com/freeCodeCamp?ref_src=twsrc%5Etfw"
+              >Tweets by freeCodeCamp</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+            ></script>
+          </span>
+        </aside>
+        <aside
+          class="aside-2"
+          aria-label="Embedded Twitter tweets relating to web design"
+        >
+          <span>
+            <a
+              data-height="500"
+              class="twitter-timeline"
+              href="https://twitter.com/fireship_dev?ref_src=twsrc%5Etfw"
+              >Tweets by fireship_dev</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+            ></script>
+          </span>
+        </aside>
+      </div>
+    </section>
+    <!-- END Aside Section -->
+  </body>
+</html>
+<!-- 5/10/2022 Finished Main Menu, but footer hasnt been added to any page. -->
+<!-- 08/10/2022 Completed the Main.html visual design, it is now responsive to smaller screens, the embedded tweets will now switch between being in a column or row form based on the viewport. I put a hard limit of the height of the twitter timeline because using data-tweet-limit = x only limits it to the latest tweet, I want the twitter timeline to be interactive. -->
+<!-- 11/10/2022 Validated main.html using validator.w3.org, error with charset included with twitter's embedded timeline charset being obselete and added headings to the navigation menu and related content. -->

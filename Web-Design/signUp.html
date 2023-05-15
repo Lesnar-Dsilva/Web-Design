@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Newsletter Sign Up</title>
+    <link href="MABN.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- BEGIN navigation block-->
+    <nav class="nav">
+      <!-- Header goes at the top of a page or section, it would be better if I nest it in the nav bar to allow for easier styling -->
+      <a href="main.html" class="altHome">
+        <header class="navHeader">
+          <picture class="logoImage">
+            <img src="Images/cogs.png" alt="An image of cogs" class="logoImg" />
+          </picture>
+          <h1 class="webDesignHeader">Web Design</h1>
+        </header>
+      </a>
+      <!-- Use of unordered list because there is no need to a ordered list or even the  bullets provided by default for <ul> <li> elements, I am going to make the list horizontal -->
+      <ul class="navList">
+        <li class="homeLink"><a href="main.html">Home</a></li>
+        <li class="blogLink"><a href="blog.html">Blog</a></li>
+        <li class="signUpLink"><a href="signUp.html">Newsletter</a></li>
+        <li class="aboutLink"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <!-- END navigation block -->
+    <div class="userIconContainer">
+      <picture class="userIconImage">
+        <img src="Images/user_icon.png" alt="user icon" class="userIconImg" />
+      </picture>
+      <h2 class="wholeForm-h2 signUpHeading">Sign Up</h2>
+    </div>
+    <div class="wholeForm">
+      <form class="form" action="mailto:you@yourwebsite.com">
+        <input
+          type="text"
+          placeholder="Enter your Name"
+          required
+          name="name"
+          class="name"
+        />
+        <input
+          type="email"
+          placeholder="Enter a valid email address"
+          class="email"
+          name="email"
+          required
+        />
+        <input type="submit" value="SUBMIT" class="submitBtn" />
+      </form>
+    </div>
+  </body>
+</html>
+<!-- 5/10/2022 Worked on the sign up page, setup the form (DESIGN LEFT!!!) NOTE:FOOTER NOT YET CREATED. -->
+<!-- 11/10/2022 Finished Sign Up page design, now suitable for smaller devices. -->
+<!-- 11/10/2022 Validated signUp.html using validator.w3.org, no errors were shown. -->

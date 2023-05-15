@@ -1,0 +1,1750 @@
+<!-- 2 Blog posts <article>, <time> element with datetime property -->
+
+<!-- About page -->
+<!-- Side content <aside> -->
+<!-- Newsletter registration paper <form> -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link href="MABN.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- BEGIN navigation block-->
+    <nav class="nav">
+      <!-- Header goes at the top of a page or section, it would be better if I nest it in the nav bar to allow for easier styling -->
+      <a href="main.html" class="altHome">
+        <header class="navHeader">
+          <picture class="logoImage">
+            <img src="Images/cogs.png" alt="An image of cogs" class="logoImg" />
+          </picture>
+          <h1 class="webDesignHeader">Web Design</h1>
+        </header>
+      </a>
+      <!-- Use of unordered list because there is no need to a ordered list or even the  bullets provided by default for <ul> <li> elements, I am going to make the list horizontal -->
+      <ul class="navList">
+        <li class="homeLink"><a href="main.html">Home</a></li>
+        <li class="blogLink"><a href="blog.html">Blog</a></li>
+        <li class="signUpLink"><a href="signUp.html">Newsletter</a></li>
+        <li class="aboutLink"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <!-- END navigation block -->
+
+    <!-- A blog post can be used anywhere across the internet, hence the <article> element is appropriate -->
+    <!-- START Article -->
+    <article class="article wholeArticle">
+      <!-- START Article Title -->
+      <div class="wholeArticle-div wholeArticleDivTitle">
+        <h1 class="wholeArticle-div-h1 wholeArticleHeadingTitle">
+          <span class="wholeArticle-div-h1-span wholeArticleTitle">
+            WHAT IS WEB DESIGN? A query answered by hypertext,style sheets and
+            scripts.
+          </span>
+        </h1>
+      </div>
+      <!-- END Article Title -->
+
+      <!-- START Main Article -->
+      <!-- START of the HISTORY of the Internet -->
+      <article class="article historyArticle">
+        <!-- START Article Image -->
+        <div class="historyArticle-div historyArticleImage">
+          <img
+            src="Images/web_design.jpg"
+            alt="Article Image"
+            class="historyArticleImg"
+          />
+        </div>
+        <!-- END Article Image -->
+
+        <!-- START Article Creation Date -->
+        <p class="historyArticle-p createDate">
+          <span class="historyArticle-p-span createDate-span"
+            ><em class="historyArticle-p-span-em createDate-span-em"
+              ><time datetime="2022-10-03">Created on October 3, 2022</time></em
+            ></span
+          >
+        </p>
+        <!-- END Article Creation Date -->
+
+        <!-- Created an element to house every other article 1 element in to allow viewer to distinguish them as seperate articles. -->
+        <div class="outlineArticle-1">
+          <!-- START ORIGINS OF THE INTERNET -->
+          <h2 class="historyArticle-h2 originsHeading">
+            <span class="historyArticle-h2-span origins-span"
+              >THE ORIGINS OF THE INTERNET</span
+            >
+          </h2>
+          <p class="historyArticle-p sputnik">
+            <span class="historyArticle-p-span sputnik-span">
+              The Internet exists because of Sputnik. The first man-made object
+              to float in space, America feared that this would allow them to
+              spy on their enemies, and win the Cold War and that nuclear
+              attacks on the American soul were possible. Computers during this
+              period in time were large, expensive and exclusively available to
+              military scientists and university staff. J.C.R Licklider, one of
+              the directors of ARPA, had a vision for the Internet which laid
+              the foundation and building blocks for the creation of the
+              INTERNET.
+            </span>
+          </p>
+          <!-- START ORIGINS OF THE INTERNET -->
+
+          <!-- START WHO INVENTED THE INTERNER? -->
+          <h2 class="historyArticle-h2 inventHeading">
+            <span class="historyArticle-h2-span invent-span"
+              >WHO INVENTED THE INTERNET?</span
+            >
+          </h2>
+          <p class="historyArticle-p ARPANET">
+            <span class="historyArticle-p-span ARPANET-span">
+              No one person is responsible for the existence of the Internet.
+              Networking technology was developed by several scientists and
+              engineers, who came together to create the ARPANET.
+            </span>
+          </p>
+          <!-- END WHO INVENTED THE INTERNER? -->
+
+          <!-- START Paul Baran (1926 - 2011) contribution to the Internet -->
+          <h3 class="historyArticle-h3 paulBaranHeading">
+            Paul Baran (1926 - 2011)
+          </h3>
+          <p class="historyArticle-p paulBaran">
+            <span class="historyArticle-p-span paulBaran-span">
+              The origins of the internet are rooted in the USA in the 1950s.
+              Paul Baran in 1959 joined the RAND Corporation, to research how
+              the US Air Force could keep control of its fleet if a nuclear
+              attack ever happened. In 1964 he proposed the idea of a
+              distributed network, where no central command point exits, and the
+              destruction of one wouldn't affect the communication of the
+              surviving points.
+            </span>
+          </p>
+          <!-- END Paul Baran (1926 - 2011) contribution to the Internet -->
+
+          <!-- START Lawrence Roberts (1937 - 2018) contribution to the Internet -->
+          <h3 class="historyArticle-h3 lawrenceRobertsHeading">
+            Lawrence Roberts (1937 - 2018)
+          </h3>
+          <p class="historyArticle-p lawrenceRoberts">
+            <span class="historyArticle-p-span lawrenceRoberts-span">
+              Chief Scientist at ARPA, who began working on the creation of a
+              distributed network.
+            </span>
+          </p>
+          <!-- END Lawrence Roberts (1937 - 2018) contribution to the Internet -->
+
+          <!-- START Donald Davies (1924 - 2000) contribution to the Internet -->
+          <h3 class="historyArticle-h3 donaldDaviesHeading">
+            Donald Davies (1924 - 2000)
+          </h3>
+          <p class="historyArticle-p donaldDavies">
+            <span class="historyArticle-p-span donaldDavies-span">
+              A British scientist who, at the same time as Roberts was
+              developing similar technology as the National Physical Laboratory
+              in Middlesex.
+            </span>
+          </p>
+          <!-- END Donald Davies (1924 - 2000) contribution to the Internet -->
+
+          <!-- START Bob Kahn (1938 -) AND Vint Cerf(1943 -) contribution to the Internet -->
+          <h3 class="historyArticle-h3 bobCerfHeading">
+            Bob Kahn (1938 -) AND Vint Cerf (1943 -)
+          </h3>
+          <p class="historyArticle-p bobCerf">
+            <span class="historyArticle-p-span bobCerf-span">
+              American computer scientists developed TCP/IP, the protocols that
+              govern how data moves through a network. Aiding the ARPANET to
+              evolve into the Internet we use today. The term Internet was
+              coined by Vint Cerf in 1974.
+            </span>
+          </p>
+          <!-- END Bob Kahn (1938 -) AND Vint Cerf (1943 -) contribution to the Internet -->
+
+          <!-- START Paul Mockapetris (1948 -) AND Jon Postel (1943 - 98) contribution to the Internet -->
+          <h3 class="historyArticle-h3 paulPostelHeading">
+            Paul Mockapetris (1948 -) AND Jon Postel (1943 - 98)
+          </h3>
+          <p class="historyArticle-p paulPostel">
+            <span class="historyArticle-p-span paulPostel-span">
+              Inventors of DNS(Domain Name Service), the 'phone book of the
+              internet'.
+            </span>
+          </p>
+          <!-- END Paul Mockapetris (1948 -) AND Jon Postel (1943 - 98) contribution to the Internet -->
+
+          <!-- START Tim Berners-Lee (1955 -) contribution to the Internet -->
+          <h3 class="historyArticle-h3 timLeeHeading">
+            Tim Berners-Lee (1955 -)
+          </h3>
+          <p class="historyArticle-p timLee">
+            <span class="historyArticle-p-span timLee-span">
+              Creator of the World Wide Web who developed many of the
+              technologies used today, such as HTML, HTTP, URLs and web
+              browsers.
+            </span>
+          </p>
+          <!-- END Tim Berners-Lee (1955 -) contribution to the Internet -->
+
+          <!-- START Marc Andreessen (1971 -) contribution to the Internet -->
+          <h3 class="historyArticle-h3 Heading">Marc Andreessen (1971 -)</h3>
+          <p class="historyArticle-p marcAndreeseen">
+            <span class="historyArticle-p-span marcAndreeseen-span">
+              Inventor of Mosaic, the first widely-used web browser.
+            </span>
+          </p>
+          <!-- END Marc Andreessen (1971 -) contribution to the Internet -->
+        </div>
+      </article>
+      <!-- END of the HISTORY of the Internet -->
+
+      <!-- **************TAKE A************** -->
+      <!-- **************PICTURE************* -->
+      <!-- *********IT'LL LAST LONGER******** -->
+
+      <!-- START Web Design -->
+      <div class="outlineArticle">
+        <article class="article designArticle">
+          <!-- START UI & UX Heading -->
+          <h2 class="designArticle-h2 UIUXHeading">
+            <span class="designArticle-h2-span UIUXHeading-span">UI & UX</span>
+          </h2>
+          <!-- END UI & UX Heading -->
+          <!-- START Article Image -->
+          <div class="designArticle-div designArticleImage">
+            <img
+              src="Images/ui&ux.jpg"
+              alt="An image depicting a website user interface"
+              class="designArticleImg"
+            />
+          </div>
+          <!-- END Article Image -->
+
+          <!-- START Article Creation Date -->
+          <p class="designArticle-p createDate">
+            <span class="designArticle-p-span"
+              ><em class="designArticle-p-span-em"
+                ><time datetime="2022-10-04"
+                  >Created on October 4, 2022</time
+                ></em
+              ></span
+            >
+          </p>
+          <!-- END Article Creation Date -->
+
+          <!-- START UI & UX -->
+          <p class="designArticle-p UIUX">
+            <span class="designArticle-p-span UIUX-span"
+              >Web design refers to the aesthetics of a website that is
+              displayed on the Internet. Usually referring to the UX (User
+              Experience) aspects of a website. Web design has evolved alongside
+              other technologies such as smartphones and tablets, to accommodate
+              for mobile and tablet browsers becoming increasingly important.
+            </span>
+          </p>
+          <!-- END UI & UX -->
+
+          <!-- LEFT OFF HERE 4/10/2022: Making changes to class names -->
+
+          <!-- START Web design vs. web development -->
+          <h2 class="designArticle-h2 WDvsWDHeading">
+            <span class="designArticle-h2-span WDvsWDHeading-span"
+              >Web design vs. website development</span
+            >
+          </h2>
+          <p class="designArticle-p visual">
+            <span class="designArticle-p-span visual-span"
+              ><strong>Web design</strong> refers to the visual design of a
+              website.
+            </span>
+          </p>
+          <p class="designArticle-p code">
+            <span class="designArticle-p-span code-span"
+              ><strong>Website development</strong> refers to the building and
+              maintenance of the front-end (visual) refers to the building and
+              maintenance of the front-end (visual) and back-end(database,
+              server, etc.) aspects of a website ensuring the website functions
+              as intended..
+            </span>
+          </p>
+          <p class="designArticle-p lang">
+            <span class="designArticle-p-span lang-span"
+              >Here are few of the languages used to build a website:</span
+            >
+          </p>
+          <!-- START of Languages List -->
+          <ul class="designArticle-list languagesList">
+            <!-- START HTML -->
+            <li class="designArticle-list-li languageList-e1">
+              <p class="designArticle-list-li-p languageList-e1-p">
+                <a href="#"><strong>HTML</strong></a>
+                (<strong>H</strong>yper<strong>T</strong>ext<strong>M</strong>arkup<strong>L</strong>anguage)
+                is the code used to structure a web page and its contents. It
+                consists of a series of elements, strongly influenced by CERN's
+                SGMLguid. Interpreted by web browsers and composed into a visual
+                or audible web page using text, images and other media. The
+                specification for HTML is written by the
+                <a href="https://html.spec.whatwg.org/multipage/">WHATWG</a>
+                (Web Hypertext Application Technology Working Group).
+              </p>
+            </li>
+            <!-- END HTML -->
+
+            <!-- START CSS -->
+            <li class="designArticle-list-li languageList-e2">
+              <p class="designArticle-list-li-p languageList-e2-p">
+                <a href="#"><strong>CSS</strong></a>
+                (<strong>C</strong>ascading<strong>S</strong>tyle<strong>S</strong>heet)
+                is a stylesheet language used to describe the presentation of a
+                document written in HTML or XML including XML dialect such as
+                SVG, MathML or XHTML). CSS is among the core language in the
+                toolbelt of a web designer/web developer, being standardized
+                across Web browsers according to
+                <a href="https://www.w3.org/Style/CSS/#specs"
+                  >W3C specifications</a
+                >.
+              </p>
+            </li>
+            <!-- END CSS -->
+
+            <!-- START JS -->
+            <li class="designArticle-list-li languageList-e3">
+              <p class="designArticle-list-li-p languageList-e3-p">
+                <a href="#"><strong>JS</strong></a>
+                (<strong>J</strong>ava<strong>S</strong>cript) is a lightweight,
+                interpreted programming language. It is the most well-known
+                scripting language for Web page. The standards for JavaScript
+                are the
+                <a
+                  href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
+                  >ECMAScript Language Specification</a
+                >
+                and
+                <a href="https://tc39.es/ecma402/"
+                  >ECMAScript Internationalization API Specification</a
+                >.
+              </p>
+            </li>
+            <!-- END JS -->
+
+            <!-- START CMS -->
+            <li class="designArticle-list-li languageList-e4">
+              <p class="designArticle-list-li-p languageList-e4-p">
+                <a href="#"><strong>CMS</strong></a>
+                (<strong>C</strong>ontent <strong>M</strong>anagement
+                <strong>S</strong>ystem) There are two types of CMS: on-premises
+                means CMS software is installed on a server, and this allows
+                businesses flexibility with their setup. Notable services that
+                allow on-premises CMSs are WordPress.org, Drupal, Joomla, Modx,
+                etc. The cloud-based CMS is hosted on servers owned and run by
+                the vendor of the CMS, this CMS software is closed-source
+                meaning no modifications can be done by the customer to the
+                software. Notable services that provide cloud-based CMSs are
+                SquareSpace, Wordpress.com, Webflow, and WIX. The most notable
+                CMS overall is WordPress.org because it powers around 43% of all
+                websites on the internet. Its user-friendly nature allows
+                non-technical users to create websites from scratch.
+              </p>
+            </li>
+            <!-- END CMS -->
+          </ul>
+          <!-- END Web design vs. web development -->
+          <!-- END of Languages List -->
+
+          <!-- START SEO -->
+          <h2 class="designArticle-h2 SEOHeading">SEO</h2>
+          <p class="designArticle-p SEO">
+            <span class="designArticle-p-span SEO-span">
+              SEO or search engine optimization is the next step in the process
+              of optimizing a website, it allows for a website to rank higher in
+              the search results e.g. page 1 on Google. These can be small
+              changes to the overall code of the website, but together they can
+              make a noticeable impact on the visitors to the website.
+            </span>
+          </p>
+          <!-- END SEO -->
+
+          <!-- START Principles of Web Design -->
+          <h2 class="designArticle-h2 WDPHeading">Web Design Principles</h2>
+          <p class="designArticle-p wDPrinciples">
+            <span class="designArticle-p-span wDPrinciples-span">
+              These principles are for graphic design, but web design isn't too
+              far-fetched as it also encompasses responsive and animated design.
+              They will give you a better understanding of how to create more
+              harmonious designs and a better UX.
+            </span>
+          </p>
+          <h2 class="designArticle-h2 WWDPHeading">
+            What are Web Design Principles?
+          </h2>
+          <p class="designArticle-p principles">
+            <span class="designArticle-p-span principles-span"
+              >Design Principles are a set of rules, which when adhered to
+              create please user experiences and visually appealing byproducts.
+              They guarantee the usability and overall balance and harmony to
+              the viewers and users.</span
+            >
+          </p>
+          <h2 class="designArticle-h2 pOfWD">The 5 Principles of Web Design</h2>
+          <p class="designArticle-p principlesOfDesign">
+            <span class="designArticle-p-span principlesOfDesign-span"
+              >List of Web Design Principles:
+            </span>
+          </p>
+          <!-- END of Principles of Web Design List -->
+          <ol class="designArticle-list principlesList">
+            <li class="designArticle-list-li principlesList-e1">
+              <p class="designArticle-list-li-p principlesList-e1">
+                <a href="#">Balance</a>
+              </p>
+            </li>
+            <li class="designArticle-list-li principlesList-e2">
+              <p class="designArticle-list-li-p principlesList-e2">
+                <a href="#">Variety</a>
+              </p>
+            </li>
+            <li class="designArticle-list-li principlesList-e3">
+              <p class="designArticle-list-li-p principlesList-e3">
+                <a href="#">Unity</a>
+              </p>
+            </li>
+            <li class="designArticle-list-li principlesList-e4">
+              <p class="designArticle-list-li-p principlesList-e4">
+                <a href="#">Pattern</a>
+              </p>
+            </li>
+            <li class="designArticle-list-li principlesList-e5">
+              <p class="designArticle-list-li-p principlesList-e5">
+                <a href="#">Contrast</a>
+              </p>
+            </li>
+          </ol>
+          <!-- END of Principles of Web Design List -->
+          <h3 class="designArticle-h3 balanceHeading">
+            <span class="designArticle-h3-span balanceHeading-span"
+              >Balance</span
+            >
+          </h3>
+          <p class="designArticle-p balance">
+            <span class="designArticle-p-span balance-span"
+              >Visual balance is how everything in a design is arranged and the
+              position of elements in a composition. Every element has a
+              different weight, depending on its size, shape or colour. A
+              lacking composition means one element overpowers the other. If the
+              design was a scale, these elements should be balanced to make the
+              design feel stable.</span
+            >
+          </p>
+          <p class="designArticle-p balance">
+            <span class="designArticle-p-span balance-span"
+              >There are two main ways to achieve balance on a website:</span
+            >
+          </p>
+          <ul class="designArticle-list principlesExplainedList">
+            <li class="designArticle-list-li principlesExplainedList-e1">
+              <p class="designArticle-list-li-p principlesExplainedList-e1-p">
+                <strong>Symmetrical balance</strong> is when the elements used
+                on one side of the design feel similar to those on the other
+                side. Centring is the easiest way to get a symmetrical design.
+                This invokes feelings of balance, beauty, and consistency.
+              </p>
+            </li>
+            <li class="designArticle-list-li principlesExplainedList-e2">
+              <p class="designArticle-list-li-p principlesExplainedList-e2-p">
+                <strong>Asymmetrical balance</strong> can be challenging to
+                design as there isn't an imaginary line drawn across the centre
+                of the design. A lighter element can balance a heavier one by
+                being off the centerline. The use of colour to balance an
+                asymmetrical design is possible.
+              </p>
+            </li>
+            <li class="designArticle-list-li principlesExplainedList-e3">
+              <p class="designArticle-list-li-p principlesExplainedList-e3-p">
+                <strong>Off-balance</strong> design prompt the viewer/audience
+                to think, due to their off-balance nature this can make people
+                feel uncomfortable or uneasy, perhaps even suggesting some sort
+                of motion and/or action.
+              </p>
+            </li>
+          </ul>
+          <div class="designArticle-div designArticleBalanceImage">
+            <img
+              src="Images/balance.jpg"
+              class="designArticle-img designArticleBalanceImg"
+              alt="An image showcasing the different types of balance possible in a design."
+            />
+            <img
+              src="Images/balance-1.jpg"
+              class="designArticle-img-1 designArticleBalanceImg"
+              alt="An image showcasing the different types of balance possible in a design."
+            />
+          </div>
+          <h3 class="designArticle-h3 varietyHeading">
+            <span class="designArticle-h3-span varietyHeading-span"
+              >Variety</span
+            >
+          </h3>
+          <p class="designArticle-p variety">
+            <span class="designArticle-p-span variety-span"
+              >Variety is a principle of art that adds interest to a design.
+              Variety works through juxtaposition and contrast. It's placing
+              different visual elements next to one another, to hold the
+              viewer's attention and guide the eyes through and around the
+              work.</span
+            >
+          </p>
+          <div class="designArticle-div designArticleVarietyImage">
+            <img
+              src="Images/variety.png"
+              class="designArticle-img designArticleVarietyImg"
+              alt="An image showcasing variety in a design."
+            />
+          </div>
+          <h3 class="designArticle-h3 unityHeading">
+            <span class="designArticle-h3-span unityHeading-span">Unity</span>
+          </h3>
+          <p class="designArticle-p unity">
+            <span class="designArticle-p-span unityspan"
+              >Unity gives the artwork a feeling of "whole". Unity is about
+              separate parts working together. Any technology uses multiple
+              parts to fulfil its purpose, no singular part cannot achieve the
+              purpose of the technology independently. Unity is a concept it
+              cannot be imagined without a shape or object. Unity can be found
+              through looking or more specific analysis.</span
+            >
+          </p>
+          <div class="designArticle-div designArticleUnityImage">
+            <img
+              src="Images/unity.jpg"
+              class="designArticle-img designArticleUnityImg"
+              alt="An image showcasing unity in a design."
+            />
+          </div>
+          <h3 class="designArticle-h3 patternHeading">
+            <span class="designArticle-h3-span PatternHeading-span"
+              >Pattern</span
+            >
+          </h3>
+          <p class="designArticle-p pattern">
+            <span class="designArticle-p-span pattern-span"
+              >A pattern is the repeating of an element all over the design.
+              Repetition emphasizes continuity and repetition, separate design
+              elements repeat in a pattern, regardless of the size or number of
+              elements. Any of our senses can perceive patterns, we can analyze
+              and comprehend patterns in any environment.
+            </span>
+          </p>
+          <div class="designArticle-div designArticlePatternImage">
+            <img
+              src="Images/pattern.jpg"
+              class="designArticle-img designArticlePatternImg"
+              alt="An image showcasing pattern in a design."
+            />
+          </div>
+          <h3 class="designArticle-h3 contrastHeading">
+            <span class="designArticle-h3-span ContrastHeading-span"
+              >Contrast</span
+            >
+          </h3>
+          <p class="designArticle-p contrast">
+            <span class="designArticle-p-span contrast-span"
+              >Contract occurs when two or more visual elements in a composition
+              are juxtaposed. Contrast can highlight the importance, create
+              interesting graphics and allow visual interest and dynamics. The
+              area could be different in size, colour, shape, etc. Their
+              difference should be obvious such as smooth and rough, large and
+              small, dark and light.</span
+            >
+          </p>
+          <div class="designArticle-div designArticleContrastImage">
+            <img
+              src="Images/contrast.jpg"
+              class="designArticle-img designArticleContrastImg"
+              alt="An image showcasing contrast in a design."
+            />
+          </div>
+          <!-- END Principles of Web Design -->
+        </article>
+      </div>
+      <!-- END Web Design -->
+
+      <!-- START Examples HTML and CSS -->
+      <div class="outlineArticle-3">
+        <article class="article exampleArticle">
+          <!-- START Example Heading -->
+          <h2 class="exampleArticle-h2 exampleHeading">
+            <span class="exampleArticle-h2-span exampleHeading-span"
+              >Examples for HTML and CSS</span
+            >
+          </h2>
+          <!-- END Example Heading -->
+          <!-- START Article Image -->
+          <div class="exampleArticle-div exampleArticleImage">
+            <img
+              src="Images/HTML&CSS.jpg"
+              alt="An image displaying the logos for HTML5 and CSS3"
+              class="exampleArticleImg"
+            />
+          </div>
+          <!-- END Article Image -->
+          <!-- START Article Creation Date -->
+          <p class="exampleArticle-p createDate">
+            <span class="exampleArticle-p-span"
+              ><em class="exampleArticle-p-span-em"
+                ><time datetime="2022-10-09"
+                  >Created on October 9, 2022</time
+                ></em
+              ></span
+            >
+          </p>
+          <!-- END Article Creation Date -->
+          <!-- START CSS use in HTML -->
+          <p class="exampleArticle-p useCSS">
+            <span class="exampleArticle-p-span useCSS-span"
+              >CSS (Cascading Style Sheets) can be used for very basic document
+              text styling, e.g. changing the colour of text, size of heading or
+              links. It is a language used by web developers/web designers to
+              style the HTML content on a web page. CSS information can be
+              provided by multiple sources, and the information from the author
+              can be classified into selector specificity, rule order,
+              inheritance and property definition. CSS style information can be
+              embedded into the HTML document or a separate CSS file.</span
+            >
+          </p>
+          <h2 class="exampleArticle-h2 addCSSHeading">
+            <span class="exampleArticle-h2-span addCSS-span"
+              >Add CSS to a HTML</span
+            >
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>style<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="comment">
+                <span class="comment">&lt;</span
+                ><span class="comment">!---</span>
+                <span class="tag">&lt;</span>style<span class="tag">></span>>tag
+                is used to define style information (CSS) for a document.
+                <span class="comment">---></span>
+              </span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/style<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="comment">
+                <span class="comment">&lt;</span
+                ><span class="comment">!---</span>
+                <span class="tag">&lt;</span>link<span class="tag">/></span> tag
+                is often used to link to external style sheets, add favicon or
+                define a relationship between the current document and an
+                external resource. <span class="comment">---></span>
+              </span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <!-- END CSS use in HTML-->
+
+          <!-- START CSS SHADOWS -->
+          <h2 class="cssShadowsHeading">
+            <span class="cssShadows">Shadows</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>Shadow text</span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">.body</span>{
+              <br />
+              &ensp;&ensp;<span class="property"
+                >text-shadow: 2px 2px red;</span
+              >
+              <br />
+              &ensp;&ensp;<span class="comment"
+                >/*horizontal shadow (x-axis) = 2px vertical shadow (y-axis) =
+                2px*/
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="shadowText">Shadow text</span>
+            </span>
+          </div>
+          <!-- END CSS SHADOWS -->
+          <!-- START CSS TEXT EFFECTS -->
+          <h2 class="cssTFXHeading">
+            <span class="cssTFX">Text Effects</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;
+              <span class="tag">&lt;</span>head<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>link rel="stylesheet"
+              href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>Text effects</span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">.body</span>{
+              <br />
+              &ensp;&ensp;<span class="property"
+                >writing-mode:vertical-rl;</span
+              >
+              <br />
+              &ensp;&ensp;<span class="comment"
+                >/*Dispalys the text vertically*/
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="TFX">Text effects</span>
+            </span>
+          </div>
+          <!-- END CSS TEXT EFFECTS -->
+          <!-- START CSS property SELECTORS -->
+          <h2 class="cssASHeading">
+            <span class="cssAS">Property selectors</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span
+              class="AS"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span
+                >property selectors</span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span
+              id="atS"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span
+                >property selectors</span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">span[class~="AS"]</span>{
+              <br />
+              &ensp;&ensp;<span class="property">color: green;</span>
+              <br />
+              &ensp;&ensp;<span class="comment"
+                >/*It can be any element, within the square brackets [] add the
+                property you want to find,use the equals to sign "=" and then
+                finally the value within the property. */
+              </span>
+              <br />
+              }
+              <br />
+              <span class="selector">span[id~="atS"]</span>{
+              <br />
+              &ensp;&ensp;<span class="property">color: red;</span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="AS">property selectors</span>
+              <span id="atS">property selectors</span>
+            </span>
+          </div>
+          <!-- END CSS property SELECTORS -->
+          <!-- START CSS GENERATED CONTENT -->
+          <h2 class="cssGCHeading">
+            <span class="cssGC">Generated Content</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>body<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span
+              class="GC"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>generated content</span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">.GC::before</span>{
+              <br />
+              &ensp;&ensp;<span class="property">content:"Here is ";</span>
+              <br />
+              &ensp;&ensp;
+              <span class="comment"
+                >/* CSS can insert content before or after an element. To
+                specify this, make a rules and add ::before or ::after to the
+                selector. Then specify the content property with the content as
+                its value. */
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="GC">generated content</span>
+            </span>
+          </div>
+          <!-- END CSS GENERATED CONTENT -->
+          <!-- START CSS STRUCTURAL SELECTORS -->
+          <h2 class="cssSSHeading">
+            <span class="cssSS">Structural selectors</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>div
+              class="StrucS"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span
+              >span class="SS-1"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>
+                Structural selectors-1
+              </span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span
+              >/span<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span
+              >span class="SS-2"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>
+                Structural selectors-2
+              </span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span
+              >/span<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/div<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">.StrucS:first-child</span>{
+              <br />
+              &ensp; <span class="property">color:blue;</span>
+              <br />
+              &ensp;
+              <span class="comment"
+                >/* This selector is from a list of structural selectors:
+                nth-child, nth-last-child, first-child, last-child, only-child,
+                nth-of-type, nth-last-of-type, first-of-type, last-of-type,
+                only-of-type. */
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="strucS">
+                <span>Structural selectors</span>
+                <span>Structural selectors</span>
+              </span>
+            </span>
+          </div>
+          <!-- END CSS STRUCTURAL SELECTORS -->
+          <!-- START CSS NEGATION PSEUDO CLASS -->
+          <h2 class="cssNPCHeading">
+            <span class="cssNPC">Negation pseudo class</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>div
+              class="NPC-1"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;div content
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/div<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span
+              class="NPC-2"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>span content</span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">:not(span) </span>{
+              <br />
+              &ensp;&ensp;<span class="property">color:orange;</span>
+              <br />
+              &ensp;
+              <span class="comment"
+                >/* This selector will apply the property to any element that is
+                not a span. */
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <div class="exampleArticle-div-div exampleBody-div-NPC">
+              <div class="NPC-1">div content</div>
+              <span class="NPC-2">span content</span>
+            </div>
+          </div>
+          <!-- END CSS NEGATION PSEUDO CLASS -->
+          <!-- START CSS Nth PSEUDO CLASS -->
+          <h2 class="cssNthPCHeading">
+            <span class="cssNthPC">Nth pseudo class</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span
+              class="NPC-1"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;span-1 content
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>span
+              class="NPC-2"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>span-2 content</span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/span<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">body:nth-child(2)</span>{
+              <br />
+              &ensp;&ensp;<span class="property">background-color:red;</span>
+              <br />
+              &ensp;
+              <span class="comment"
+                >/* This selector will apply the property to the second child
+                element of the body. */
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="NthPC">
+                <span class="NthPC-1">span-1 content</span>
+                <span class="NthPC-2">span-2 content</span>
+              </span>
+            </span>
+          </div>
+          <!-- END CSS Nth PSEUDO CLASS -->
+          <!-- START CSS VALIDITY PSEUDO CLASS -->
+          <h2 class="cssNthPCHeading">
+            <span class="cssNthPC">Validity psuedo class</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>input
+              type="email" placeholder="Enter a valid email address"
+              class="VPCEmail" name="email" required/>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector"> .VPCEmail::placeholder </span>
+              {
+              <br />
+              &ensp;&ensp;<span class="property"> color: white; </span>
+              <br />
+              &ensp;
+              <span class="comment">
+                /* This selector will apply the property to the second child
+                element of the body. */
+              </span>
+              <br />
+              }
+              <br />
+              <span class="selector"> .VPCEmail </span>
+              {
+              <br />
+              &ensp;&ensp;<span class="property">
+                border: 1px solid black;
+                <br />
+                &ensp;&ensp;outline: 0px;
+                <br />
+                &ensp;&ensp;padding: 5px;
+                <br />
+                &ensp;&ensp;color: white;
+              </span>
+              <br />
+              &ensp;
+              <span class="comment">
+                /* The input will be green when the user add a valid email
+                address in the input. */
+              </span>
+              <br />
+              }
+              <br />
+              <span class="selector"> .VPCEmail:invalid </span>
+              {
+              <br />
+              &ensp;&ensp;<span class="property"> background-color: red; </span>
+              <br />
+              &ensp;
+              <span class="comment">
+                /* The input will be red if it is left blank or isn't valid. */
+              </span>
+              <br />
+              }
+              <br />
+              <span class="selector"> .VPCEmail:valid </span>
+              {
+              <br />
+              &ensp;&ensp;<span class="property">
+                background-color: green;
+              </span>
+              <br />
+              &ensp;
+              <span class="comment">
+                /* The input will be green when the user add a valid email
+                address in the input. */
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="VPC">
+                <input
+                  type="email"
+                  placeholder="Enter a valid email address"
+                  class="VPCEmail"
+                  name="email"
+                  required
+                />
+              </span>
+            </span>
+          </div>
+          <!-- END CSS VALIDITY PSEUDO CLASS -->
+          <!-- START CSS GRADIENT -->
+          <h2 class="cssGHeading">
+            <span class="cssG">Gradient</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>div
+              class="gradient"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gradient
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/div<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">.gradient</span>{
+              <br />
+              &ensp;&ensp;<span class="property">
+                color: white;
+                <br />
+                &ensp;&ensp;padding: 10px;
+                <br />
+                &ensp;&ensp;background: rgb(0, 0, 255);
+                <br />
+                &ensp;&ensp;background: linear-gradient( 90deg, rgba(0, 0, 255,
+                1) 0%, rgba(255, 0, 0, 1) 100% );
+              </span>
+              <br />
+              &ensp;
+              <span class="comment">/* Gradient */ </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="gradient">Gradient</span>
+            </span>
+          </div>
+          <!-- END CSS GRADIENT -->
+          <!-- START CSS TRANSFORM -->
+          <h2 class="cssTHeading">
+            <span class="cssT">Transform</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>div
+              class="transform"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Transform
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/div<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">.transform</span>{
+              <br />
+              &ensp;&ensp;<span class="property">
+                width: max-content;
+                <br />
+                &ensp;&ensp; transform: rotate(45deg);
+              </span>
+              <br />
+              &ensp;
+              <span class="comment"
+                >/* Have to use width otherwise the text will move outside of
+                the exisiting container and overlap over other elements. */
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="transform">Transform</span>
+            </span>
+          </div>
+          <!-- END CSS TRANSFORM -->
+          <!-- START CSS TRANSITION -->
+          <h2 class="cssTSHeading">
+            <span class="cssTS">Transition</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>div
+              class="transition"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Transition
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/div<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              <span class="selector">.transition</span>{
+              <br />
+              &ensp;&ensp;<span class="property">
+                width: 100px;
+                <br />
+                &ensp;&ensp;padding: 10px;
+                <br />
+                &ensp;&ensp;color: white;
+                <br />
+                &ensp;&ensp;background: red;
+                <br />
+                &ensp;&ensp;transition: width 2s, background-color 2s;
+              </span>
+              <br />
+              &ensp;
+              <span class="comment"
+                >/* Seperate different transitions using (,) and specify the
+                property and time span of the transition. */
+              </span>
+              <br />
+              }
+              <br />
+              <span class="selector">.transition:hover</span>{
+              <br />
+              &ensp;&ensp;<span class="property">
+                width: 300px;
+                <br />
+                &ensp;&ensp;background-color: rgb(0, 255, 0);
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="transition">Transition</span>
+            </span>
+          </div>
+          <!-- END CSS TRANSITION -->
+          <!-- START CSS ANIMATIONS -->
+          <h2 class="cssAHeading">
+            <span class="cssA">Animations</span>
+          </h2>
+          <div class="exampleArticle-div exampleHTML">
+            <span class="exampleArticle-div-span exampleHTML-span">
+              <span class="tag">&lt;</span>!DOCTYPE html<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>html<span class="tag">></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>link
+              rel="stylesheet" href="styles.css"<span class="tag">/></span>
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/head<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>body<span class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>div
+              class="animations"<span class="tag">></span>
+              <br />
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Animations
+              <br />
+              &ensp;&ensp;&ensp;&ensp;<span class="tag">&lt;</span>/div<span
+                class="tag"
+                >></span
+              >
+              <br />
+              &ensp;&ensp;<span class="tag">&lt;</span>/body<span class="tag"
+                >></span
+              >
+              <br />
+              <span class="tag">&lt;</span>/html<span class="tag">></span>
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleCSS">
+            <span class="exampleArticle-div-span exampleCSS-span">
+              &ensp;&ensp;<span class="comment"
+                >/* @keyframes animation-name */
+              </span>
+              <br />
+              <span class="selector">@keyframes animation</span>{
+              <br />
+              &ensp;&ensp;<span class="property">
+                from { background-color: red; }
+                <br />
+                &ensp;&ensp;to { background-color: blue; }
+              </span>
+              <br />
+              }
+              <br />
+              <span class="selector">.animations</span>{
+              <br />
+              &ensp;&ensp;<span class="property">
+                color: white;
+                <br />
+                &ensp;&ensp;animation: animation 1s linear 0s infinite
+                alternate;
+              </span>
+              <br />
+
+              &ensp;&ensp;<span class="comment"
+                >/* Animation shorthand property:
+                <br />
+                &ensp;&ensp;animation: (animation-name)
+                <br />
+                &ensp;&ensp;(animation-duration)
+                <br />
+                &ensp;&ensp;(animation-type)
+                <br />
+                &ensp;&ensp;(animation-delay)
+                <br />
+                &ensp;&ensp;(animation-iteration-count)
+                <br />
+                &ensp;&ensp;(animation-direction) */
+                <br />
+                &ensp;&ensp;/*
+                <br />
+                &ensp;&ensp;&ensp;&ensp;These properties can be used seperately
+                aswell.
+                <br />
+                &ensp;&ensp;*/
+              </span>
+              <br />
+              }
+            </span>
+          </div>
+          <div class="exampleArticle-div exampleBody">
+            <span class="exampleArticle-div-span exampleBody-span">
+              <span class="animations">Animations</span>
+            </span>
+          </div>
+          <!-- END CSS ANIMATIONS -->
+        </article>
+      </div>
+      <!-- END Examples HTML and CSS -->
+      <!-- END Main Article -->
+    </article>
+    <!-- END Article -->
+    <!-- Encapsulated both articles into one article element, to make them easily distributable. -->
+  </body>
+</html>
+<!-- 3/10/2022 Create the basics of the website and layout for history. -->
+<!-- 4/10/2022 Finished history, moved onto layout for web design (WATCH OUT FOR CLASS NAMES!!!). -->
+<!-- 5/10/2022 Finished 5 Principles of Web Design, solved classes issue (CLASS NAMES CORRECTED!!!) NOTE:FOOTER NOT YET CREATED. -->
+<!-- 09/10/2022 I decided to do the required CSS styling on the blog page as examples to not stray away from my vision for the website, and to not compromise the asthetics. These will contribute better towards my examples on the blog page. I have 10/20 completed. -->
+<!-- 10/10/2022 Completed all the required CSS styling by converting it into blog page examples. I have 20/20 completed. -->
+<!-- 10/10/2022 Removed duplicate class names that weren't used or similar elements using different class names for no evident reason. Validated the blog.html on validator.w3.org, no errors or warning were shown. -->
+<!-- 11/10/2022 Validated blog.html using validator.w3.org, no errors were shown. -->
