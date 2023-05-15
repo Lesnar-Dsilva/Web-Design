@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Page</title>
+    <link href="../index.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Logo START -->
+    <nav>
+      <a href="../index.html">
+        <div class="logo">
+          <span class="logoFG">MOVERS</span
+          ><img src="../logoBG.png" alt="house logo" class="logoBG" />
+        </div>
+      </a>
+    </nav>
+    <!-- Logo END -->
+
+    <!-- Property Page START -->
+    <main class="propertyPage">
+      <div class="propertyImages">
+        <img
+          class="propertyImageLarge"
+          alt="Property Image"
+          src="../images/prop2pic1small.jpeg"
+        />
+        <a href="prop2images.html" class="thumbnails"> </a>
+      </div>
+
+      <div class="propertyInformation">
+        <div class="propInfo">
+          <div class="propertyBedrooms">Bedrooms:</div>
+          <div class="propertyType">Property Type:</div>
+          <div class="propertyTenure">Property Tenture:</div>
+        </div>
+        <address class="propertyAddress"></address>
+        <div class="propertyPrice"></div>
+      </div>
+      <!-- jQuery Tabs Widget START -->
+      <div id="tabs">
+        <ul>
+          <li><a href="#propertyDescription">Property Description</a></li>
+          <li><a href="#propertyFloorPlan">Property Floor Plan</a></li>
+          <li><a href="#embedMap">Property Location</a></li>
+        </ul>
+        <div id="propertyDescription" class="propertyDescription"></div>
+        <div id="propertyFloorPlan" class="propertyFloorPlan">
+          <img class="floorPlan" src="1" alt="Floor Plan" />
+        </div>
+        <!-- Google Maps START -->
+        <div id="embedMap" class="embedMap">
+          <address class="mapsAddress"></address>
+          <iframe
+            class="googleMaps"
+            title="Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.674969821771!2d0.07961071595443031!3d51.39065152705344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ab82cc8f3cb1%3A0xc746da03b0c6c716!2sPetts%20Wood%20Rd%2C%20Petts%20Wood%2C%20Orpington%20BR5%201LE!5e0!3m2!1sen!2suk!4v1671370695898!5m2!1sen!2suk"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <!-- Google Maps END -->
+      </div>
+      <!-- jQuery Tabs Widget END -->
+    </main>
+    <!-- Property Page END -->
+    <script>
+      //makes the element into jQuery tabs widget
+      $(function () {
+        $("#tabs").tabs();
+      });
+
+      var properties = new Map();
+      //render the page
+      function render() {
+        var prop =
+          $(".propertyImages > a").attr("href").split(/(\d+)/)[0] +
+          $(".propertyImages > a").attr("href").split(/(\d+)/)[1];
+        properties.forEach(function (property, index) {
+          Object.keys(property).forEach(function (key, i) {
+            if (key == "id") {
+              if (property[key] == prop) {
+                $(".propertyDescription").append(property["description"]);
+                $(".propertyAddress").append(property["location"]);
+                $(".mapsAddress").append(property["location"]);
+                $(".propertyPrice").append(
+                  property["price"].toLocaleString("en-GB", {
+                    style: "currency",
+                    currency: "GBP",
+                  })
+                );
+                $(".propertyBedrooms").append(" x" + property["bedrooms"]);
+                $(".propertyType").append(" " + property["type"]);
+                $(".propertyTenure").append(" " + property["tenure"]);
+                $(".floorPlan").attr(
+                  "src",
+                  "../images/" + prop + "FloorPlan.png"
+                );
+              }
+            }
+          });
+        });
+        for (i = 0; i < 7; i++) {
+          var prop =
+            $(".propertyImages > a").attr("href").split(/(\d+)/)[0] +
+            $(".propertyImages > a").attr("href").split(/(\d+)/)[1];
+          $(".thumbnails").append(
+            '<img class="propertyThumbnails" alt="Property Image" src="../images/' +
+              prop +
+              "pic" +
+              (i + 1) +
+              'small.jpeg">'
+          );
+        }
+      }
+      const myFetch = async (...args) => {
+        const result = await fetch("./properties.json")
+          .then((response) => response.json())
+          .then((obj) => {
+            for (index = 0; index < obj.properties.length; index++) {
+              Object.keys(obj["properties"][index]).forEach(function (k, i) {
+                if (k == "added") {
+                  obj["properties"][index][k] =
+                    new Date(
+                      Date.parse(
+                        obj["properties"][index][k]["day"] +
+                          obj["properties"][index][k]["month"] +
+                          obj["properties"][index][k]["year"]
+                      )
+                    ).getFullYear() +
+                    "-" +
+                    (new Date(
+                      Date.parse(
+                        obj["properties"][index][k]["day"] +
+                          obj["properties"][index][k]["month"] +
+                          obj["properties"][index][k]["year"]
+                      )
+                    ).getMonth() +
+                      1) +
+                    "-" +
+                    new Date(
+                      Date.parse(
+                        obj["properties"][index][k]["day"] +
+                          obj["properties"][index][k]["month"] +
+                          obj["properties"][index][k]["year"]
+                      )
+                    ).getDate();
+                }
+              });
+              properties.set(index, obj["properties"][index]);
+            }
+          });
+        render();
+      };
+      myFetch();
+    </script>
+  </body>
+</html>
+<!-- 0 errors 21/12/2022 -->

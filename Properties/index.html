@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- DEVELOPED IN MICROSOFT EDGE START -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Page</title>
+    <!-- Changed from default-src to allow json file to be accessed using JavaScript fetch() START -->
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self';" />
+    <!-- Changed from default-src to allow json file to be accessed using JavaScript fetch() END -->
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <aside class="dropAdd">Drop Here To Add</aside>
+      <div class="division">
+        <!-- Logo START -->
+        <nav>
+          <a href="index.html">
+            <div class="logo">
+              <span class="logoFG">MOVERS</span
+              ><img src="logoBG.png" alt="house logo" class="logoBG" />
+            </div>
+          </a>
+        </nav>
+        <!-- Logo END -->
+
+        <main>
+          <!-- User inputs START -->
+          <form>
+            <label for="pType">Property Type</label>
+            <input type="text" name="pType" id="pType" />
+            <label for="minPrice">Min Price</label>
+            <input type="text" name="lPrice" id="minPrice" />
+            <label for="maxPrice">Max Price</label>
+            <input type="text" name="hPrice" id="maxPrice" />
+            <label for="minRooms">Min No. of Rooms</label>
+            <input type="text" name="lBedRooms" id="minRooms" />
+            <label for="maxRooms">Max No. of Rooms</label>
+            <input type="text" name="hBedRooms" id="maxRooms" />
+            <label for="fromDate">Date From</label>
+            <input type="text" name="lAdded" id="fromDate" />
+            <label for="toDate">Date To</label>
+            <input type="text" name="hAdded" id="toDate" />
+            <label for="postCode">Post Code</label>
+            <input type="text" name="clocation" id="postCode" />
+            <button class="search" type="button">Search</button>
+          </form>
+          <!-- User inputs END -->
+          <!-- Propeties in the favourites list START -->
+          <div class="favourites">
+            <!-- Local Storage Controls START -->
+            <div class="favBtns">
+              <a href="index.html" class="backBtn">❌</a>
+              <a href="#" class="read">Read</a>
+              <a href="#" class="store">Store</a>
+              <a href="#" class="clear">Clear</a>
+            </div>
+            <!-- Local Storage Controls END -->
+          </div>
+          <!-- Propeties in the favourites list END -->
+          <!-- Propeties matching the inputs START -->
+          <div id="pRList"></div>
+          <!-- Propeties matching the inputs END -->
+        </main>
+      </div>
+      <aside class="dropRemove">Drop Here To Remove</aside>
+    </div>
+    <script>
+      /* var properties = {
+        properties: [
+          {
+            id: "prop1",
+            type: "House",
+            bedrooms: 3,
+            price: 750000,
+            tenure: "Freehold",
+            description:
+              "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+            location: "Petts Wood Rd, Petts Wood, Orpington BR5 1LE",
+            picture: "images/prop1pic1small.jpeg",
+            url: "properties/prop1.html",
+            added: {
+              month: "October",
+              day: 12,
+              year: 2022,
+            },
+          },
+          {
+            id: "prop2",
+            type: "Flat",
+            bedrooms: 2,
+            price: 399995,
+            tenure: "Freehold",
+            description:
+              "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+            location: "Crofton Rd, Orpington BR6 8JB",
+            picture: "images/prop2pic1small.jpeg",
+            url: "properties/prop2.html",
+            added: {
+              month: "September",
+              day: 14,
+              year: 2022,
+            },
+          },
+          {
+            id: "prop3",
+            type: "Detached",
+            bedrooms: 5,
+            price: 1350000,
+            tenure: "Freehold",
+            description:
+              "A spacious, detached, double-fronted family home is for sale on this highly trafficked residential street on the border of Upper Norwood and Dulwich. With five double bedrooms, two bathrooms, one of which is en suite, a massive 35' x 18' double reception room, a second reception room, a kitchen/breakfast room, and a downstairs cloakroom, the home has been expanded to provide very generous living space over three levels. Outside, the home has a wonderful, mature garden to the back and a drive that offers off-street parking to the front. The access to Dulwich Village, with its top-notch schools, Picture Gallery, golf course, and assortment of cafés and restaurants, is made easy thanks to Hitherwood Drive's location. Additionally nearby is Crystal Palace Center, which features a variety of stores, boutiques, cafés, and restaurants. There are rail connections to central London from neighbouring Sydenham Hill (London Victoria or London Blackfriars) and Gipsy Hill (London Bridge or London Victoria).",
+            location: "Hitherwood Dr, London SE19 1XB",
+            picture: "images/prop3pic1small.jpeg",
+            url: "properties/prop3.html",
+            added: {
+              month: "November",
+              day: 7,
+              year: 2022,
+            },
+          },
+          {
+            id: "prop4",
+            type: "Detached",
+            bedrooms: 8,
+            price: 30000000,
+            tenure: "Freehold",
+            description:
+              "For the first time in 60 years, a very unique Freehold home hidden in a double-width garden is available for sale.\" We are delighted to present this one-of-a-kind house, which provides the lucky buyer with a rare blend of solitude and luxury living in one of London's most elegant green towns. This spectacular freehold neo-Georgian home stands out on the intersection of Radlett Place and Avenue Road, facing the Acacia Road junction. When considering the dimensions, which are about double the breadth of most other properties along the road (width: 128 ft (38.8 m) and depth: 139 ft (42.3 m)), the sense of grandeur becomes clear. With a total area of 0.41 and Radlett Place on one side acres (0.17 hectares), the land is somewhat far from its neighbours. ACCOMMODATION • Master suite (with huge dressing room and bathroom) • 7 more bedrooms (2 baths) •Drawing Room •Study •Dining Room •Kitchen/Breakfast Room •Morning Room •Utility Room •Cloakroom The home is located in St. John's Wood, one of the first lush hamlet north of Mayfair (only a 10-minute drive away). The property has a lot of possibilities for renovation and redevelopment. Extensive study has been conducted, and specifics may be shared upon request.",
+            location: "Avenue Road, NW8 6BU",
+            picture: "images/prop4pic1small.jpeg",
+            url: "properties/prop4.html",
+            added: {
+              month: "June",
+              day: 23,
+              year: 2021,
+            },
+          },
+          {
+            id: "prop5",
+            type: "Terraced",
+            bedrooms: 8,
+            price: 26950000,
+            tenure: "Freehold",
+            description:
+              "The property was built in 1875 and has been carefully restored and completely refurbished to provide one of the largest lateral penthouse apartments over three floors with an internal passenger lift and terraces overlooking Regent's Park. It is private and prestigious, with commanding views over 487 acres of royal parkland and gardens. The adaptable accommodation measures roughly 5,746 square feet (533 square metres) and includes 5 bedrooms, 4 reception spaces, and 5 bathrooms. Featuring individual balconies and patios, as well as resident parking and a private garage Cambridge Gate is a one-of-a-kind property that combines great services with a fundamentally simple and fashionable way of living. Cambridge Gate benefits from the serene isolation and security that comes with having a view of Central London's largest park. The address is inside the bounds of Regent's Park, making it the only park in Central London with a residential presence. The City of London is around 2.1 miles to the east, while the West End is less than a mile away. Mayfair is home to some of the world's best stores, including those on Bond Street, Regent Street, and Oxford Street, all of which are within a 10-minute walk. a once-in-a-lifetime opportunity to purchase a sizable home property in central London's most exclusive neighbourhood.",
+            location: "Cambridge Gate, Regents Park, London NW1 4JX",
+            picture: "images/prop5pic1small.jpeg",
+            url: "properties/prop5.html",
+            added: {
+              month: "January",
+              day: 1,
+              year: 2022,
+            },
+          },
+          {
+            id: "prop6",
+            type: "Town house",
+            bedrooms: 8,
+            price: 26950000,
+            tenure: "Freehold",
+            description:
+              "This spectacular apartment, which is approximately 5000 square feet in size and is located in one of the most prestigious places in the world, provides great living and sleeping space. Colhill Spink designed the flat, which has a modern aesthetic and is quite roomy. The apartment gets great natural light all day thanks to its east/west outlook. The magnificent double-height drawing room, which also contains a galleried study space and back views over the building's impeccably maintained private garden, is the major attraction of the structure. It faces west and offers front views of the nearby ambassadorial houses. Off of this main area, there is a patio and a gorgeously furnished kitchen. Additionally, the unit features adaptable living space that is now set out as a luxurious master suite with two dressing rooms and another suite, although it may be easily divided into three superb suites. Modernist in design, 8 Kensington Palace Gardens is said to include just five other flats. In addition to the sizable common garden at the back, the building is well-run and includes a porter, an underground parking lot, plenty of guest parking, and basement storage. One of the most prestigious addresses in the world is Kensington Palace Gardens. To the west of Kensington Gardens is a very guarded private road that is home to many of London's ambassadorial mansions in addition to Kensington Palace. The numerous services that these neighbourhoods have to offer, as well as the Notting Hill and High Street Kensington Underground stations, are both easily accessible on foot.",
+            location: "Lygon Pl, London SW1W 0JR",
+            picture: "images/prop6pic1small.jpeg",
+            url: "properties/prop6.html",
+            added: {
+              month: "November",
+              day: 11,
+              year: 2020,
+            },
+          },
+          {
+            id: "prop7",
+            type: "Penthouse",
+            bedrooms: 5,
+            price: 27000000,
+            tenure: "Freehold",
+            description:
+              "One of the most prestigious addresses in the world is Kensington Palace Gardens. To the west of Kensington Gardens is a very secure private road that is home to many of London's ambassadorial mansions in addition to Kensington Palace. The numerous services that these neighbourhoods have to offer, as well as the Notting Hill and High Street Kensington Underground stations, are both easily accessible on foot. of the possibilities at Cadogan Place and the chance for a prospective buyer to design a genuinely unique London residence. a house that is both modern, cosy, and opulent while also being steeped in architectural heritage and detail. a fantastic opportunity SHH's efforts have mostly concentrated on the existing kitchen, which will be changed by the creation of a seamless glass connection linking the main apartment to the mews behind. A modern orangery inspired by Georgian and Victorian glasshouses has been constructed, allowing for both indoor and outdoor living and extending the kitchen into a new family area. Cadogan Place will include vast formal party rooms, places for families to unwind and enjoy one other's company, watch a movie in the home cinema, or take a minute for themselves in the spa or gym by the time the renovation is finished. And all of these locations blend into one another. It's difficult to imagine living in a more picturesque section of London than Belgravia. The region is an attractive, tranquil, and established portion of London, bordering by both Hyde Park and St James's Park. It is defined by its garden squares and listed Thomas Cubitt-designed terraces. Sloane Street is home to globally recognised high fashion labels, and it offers a world-class shopping experience when combined with Harrods and Harvey Nichols. Pavilion Road and the Pimlico Road design area both include an eclectic mix of handcrafted boutiques and a fantastic selection of stores, cafés, and small diners. And, of course, there are some of London's best Michelin-starred restaurants nearby. It's one of the city's most well-known and sought-after neighbourhoods, where every possible need is met.",
+            location: "Brook Street, London W1K 4HJ",
+            picture: "images/prop7pic1small.jpeg",
+            url: "properties/prop7.html",
+            added: {
+              month: "July",
+              day: 21,
+              year: 2022,
+            },
+          },
+        ],
+      }; */
+
+      //inputs to a map
+      function addValues() {
+        $("form input").each(function () {
+          if (this.value != null && this.value != "" && this.value != " ") {
+            const func = (str, obj) => {
+              if (
+                values.get(str) &&
+                (str == "price" || str == "bedrooms" || str == "added")
+              ) {
+                values.get(str).push("To: " + obj);
+              } else {
+                if ($(this).attr("name").slice(0, 1) == "l") {
+                  values.set(str, ["After: " + obj]);
+                } else if ($(this).attr("name").slice(0, 1) == "h") {
+                  values.set(str, ["To: " + obj]);
+                } else {
+                  values.set(str, [obj]);
+                }
+              }
+            };
+            func($(this).attr("name").slice(1).toLowerCase(), this.value);
+          }
+        });
+      }
+
+      //search function iterating through the properties map
+      function search() {
+        var booleans = new Array();
+        properties.forEach(function (property, index) {
+          Object.keys(property).forEach(function (key, i) {
+            values.forEach(function (value, elementName) {
+              if (
+                elementName == "type" &&
+                elementName == key &&
+                value == property[key]
+              ) {
+                booleans.push(true);
+              } else if (elementName == "price" && elementName == key) {
+                if (
+                  value.length == 1 &&
+                  value[0].split(" ")[0] == "After:" &&
+                  value[0].split(" ")[1] <= property[key]
+                ) {
+                  booleans.push(true);
+                } else if (
+                  value.length == 1 &&
+                  value[0].split(" ")[0] == "To:" &&
+                  value[0].split(" ")[1] >= property[key]
+                ) {
+                  booleans.push(true);
+                } else if (
+                  value.length == 2 &&
+                  value[0].split(" ")[1] <= property[key] &&
+                  value[1].split(" ")[1] >= property[key]
+                ) {
+                  booleans.push(true);
+                }
+              } else if (elementName == "bedrooms" && elementName == key) {
+                if (
+                  value.length == 1 &&
+                  value[0].split(" ")[0] == "After:" &&
+                  value[0].split(" ")[1] <= property[key]
+                ) {
+                  booleans.push(true);
+                } else if (
+                  value.length == 1 &&
+                  value[0].split(" ")[0] == "To:" &&
+                  value[0].split(" ")[1] >= property[key]
+                ) {
+                  booleans.push(true);
+                } else if (
+                  value.length == 2 &&
+                  value[0].split(" ")[1] <= property[key] &&
+                  value[1].split(" ")[1] >= property[key]
+                ) {
+                  booleans.push(true);
+                }
+              } else if (elementName == "added" && elementName == key) {
+                if (
+                  value.length == 1 &&
+                  value[0].split(" ")[0] == "After:" &&
+                  Date.parse(value[0]) <= Date.parse(property[key])
+                ) {
+                  booleans.push(true);
+                } else if (
+                  value.length == 1 &&
+                  value[0].split(" ")[0] == "To:" &&
+                  Date.parse(value[0]) >= Date.parse(property[key])
+                ) {
+                  booleans.push(true);
+                } else if (
+                  value.length == 2 &&
+                  Date.parse(value[0]) <= Date.parse(property[key]) &&
+                  Date.parse(value[1]) >= Date.parse(property[key])
+                ) {
+                  booleans.push(true);
+                }
+              } else if (elementName == "location" && elementName == key) {
+                var postcode = property[key]
+                  .split(",")
+                  .map((s) =>
+                    s.trim().match(/([A-Za-z]{1,2}\d{1,2})(\s?(\d?\w{2}))?/)
+                  )
+                  .filter((e) => e);
+                if (postcode[0]["input"].split(" ")[1] == value) {
+                  booleans.push(true);
+                }
+              }
+            });
+          });
+          if (
+            booleans.length == values.size /*  &&
+            booleans.length > 0 &&
+            values.size > 0 */
+            //These conditions stop the results from rendering without input
+          ) {
+            found.push(property);
+          }
+          booleans = [];
+        });
+        found.forEach(function (obj, i) {
+          $("#pRList").append(
+            '<div class="sProperty ' +
+              obj["id"] +
+              '"><a href="' +
+              obj["url"] +
+              '"><div class="property"><img alt="Thumbnail image for property" class="pThumbnail"src="' +
+              obj["picture"] +
+              '"></img><div class="aPlusDesc"><address class="address">' +
+              obj["location"] +
+              '</address><p class="description">' +
+              obj["description"] +
+              '</p><div class="price">' +
+              obj["price"].toLocaleString("en-GB", {
+                style: "currency",
+                currency: "GBP",
+              }) +
+              '</div></div></div></a><div class="btns"><button type="button" class="add">Add to Favourites</button></div></div>'
+          );
+          //DRAG AND DROP ADD TO FAVOURITES START
+          $("." + obj["id"]).draggable({
+            helper: (event) => {
+              return (
+                '<div class="sProperty ' +
+                obj["id"] +
+                '"><a href="' +
+                obj["url"] +
+                '"><div class="property"><img alt="Thumbnail image for property" class="pThumbnail"src="' +
+                obj["picture"] +
+                '"></img><div class="aPlusDesc"><address class="address">' +
+                obj["location"] +
+                '</address><p class="description">' +
+                obj["description"] +
+                '</p><div class="price">' +
+                obj["price"].toLocaleString("en-GB", {
+                  style: "currency",
+                  currency: "GBP",
+                }) +
+                '</div></div></div></a><div class="btns"><button type="button" class="add">Add to Favourites</button></div></div>'
+              );
+            },
+          });
+          $(".dropAdd").droppable({
+            drop: (event, ui) => {
+              found.forEach(function (obj, i) {
+                if (
+                  obj["id"] == ui.draggable.attr("class").split(" ")[1] &&
+                  !favourites.has(ui.draggable.attr("class").split(" ")[1])
+                ) {
+                  favourites.set(ui.draggable.attr("class").split(" ")[1], obj);
+                  localStorage.setItem(
+                    "favourites",
+                    JSON.stringify(Array.from(favourites))
+                  );
+                  renderFavourites();
+                }
+              });
+            },
+          });
+          //DRAG AND DROP ADD TO FAVOURITES END
+        });
+      }
+
+      //THERE ARE TWO WAYS TO IMPORT JSON INTO JAVASCRIPT
+      // 1.Using fetch(URL)
+      //REMEMBER: FETCH() IS CALLED AFTER EVERYTHING, USE async
+      const myFetch = async (...args) => {
+        const result = await fetch("./properties/properties.json")
+          .then((response) => response.json())
+          .then((obj) => {
+            for (index = 0; index < obj.properties.length; index++) {
+              Object.keys(obj["properties"][index]).forEach(function (k, i) {
+                if (k == "added") {
+                  obj["properties"][index][k] =
+                    new Date(
+                      Date.parse(
+                        obj["properties"][index][k]["day"] +
+                          obj["properties"][index][k]["month"] +
+                          obj["properties"][index][k]["year"]
+                      )
+                    ).getFullYear() +
+                    "-" +
+                    (new Date(
+                      Date.parse(
+                        obj["properties"][index][k]["day"] +
+                          obj["properties"][index][k]["month"] +
+                          obj["properties"][index][k]["year"]
+                      )
+                    ).getMonth() +
+                      1) +
+                    "-" +
+                    new Date(
+                      Date.parse(
+                        obj["properties"][index][k]["day"] +
+                          obj["properties"][index][k]["month"] +
+                          obj["properties"][index][k]["year"]
+                      )
+                    ).getDate();
+                }
+              });
+              properties.set(index, obj["properties"][index]);
+            }
+          });
+        search();
+      };
+
+      // 2.Copy the JSON array of object into a JavaScript variable being recognised also as an array of objects.
+      // console.log("Properties", properties);
+
+      //add to favourites list
+      function add(e) {
+        var prop = e.parent().parent().attr("class").split(" ")[1];
+        found.forEach(function (obj, i) {
+          if (obj["id"] == prop && !favourites.has(prop)) {
+            favourites.set(prop, obj);
+            renderFavourites();
+            localStorage.setItem(
+              "favourites",
+              JSON.stringify(Array.from(favourites))
+            );
+          }
+        });
+      }
+
+      //remove from favourites list
+      function remove(e) {
+        var prop = e.parent().parent().attr("class").split(" ")[1];
+        favourites.forEach(function (obj, i) {
+          if (obj["id"] == prop) {
+            favourites.delete(prop);
+            renderFavourites();
+            localStorage.setItem(
+              "favourites",
+              JSON.stringify(Array.from(favourites))
+            );
+          }
+        });
+      }
+
+      //render a new favourites list
+      function renderFavourites() {
+        $(".favourites").empty();
+        $(".favourites").append(
+          '<div class="favBtns">\
+              <a href="index.html" class="backBtn">❌</a>\
+              <a href="#" class="read">Read</a>\
+              <a href="#" class="store">Store</a>\
+              <a href="#" class="clear">Clear</a>\
+            </div>'
+        );
+
+        favourites.forEach(function (obj, i) {
+          $(".favourites").append(
+            '<div class="sProperty ' +
+              obj["id"] +
+              '"><a href="' +
+              obj["url"] +
+              '"><div class="property"><img alt="Thumbnail image for property" class="pThumbnail"src="' +
+              obj["picture"] +
+              '"></img><div class="aPlusDesc"><address class="address">' +
+              obj["location"] +
+              '</address><p class="description">' +
+              obj["description"] +
+              '</p><div class="price">' +
+              obj["price"].toLocaleString("en-GB", {
+                style: "currency",
+                currency: "GBP",
+              }) +
+              '</div></div></div></a><div class="btns"><button type="button" class="remove">Remove from Favourites</button></div></div>'
+          );
+          //DRAG AND DROP REMOVE FROM FAVOURITES START
+          $("." + obj["id"]).draggable({
+            helper: (event) => {
+              return (
+                '<div class="sProperty ' +
+                obj["id"] +
+                '"><a href="' +
+                obj["url"] +
+                '"><div class="property"><img alt="Thumbnail image for property" class="pThumbnail"src="' +
+                obj["picture"] +
+                '"></img><div class="aPlusDesc"><address class="address">' +
+                obj["location"] +
+                '</address><p class="description">' +
+                obj["description"] +
+                '</p><div class="price">' +
+                obj["price"].toLocaleString("en-GB", {
+                  style: "currency",
+                  currency: "GBP",
+                }) +
+                '</div></div></div></a><div class="btns"><button type="button" class="add">Add to Favourites</button></div></div>'
+              );
+            },
+          });
+          $(".dropRemove").droppable({
+            drop: (event, ui) => {
+              found.forEach(function (obj, i) {
+                if (
+                  obj["id"] == ui.draggable.attr("class").split(" ")[1] &&
+                  !favourites.has(ui.draggable.attr("class").split(" ")[1])
+                ) {
+                  favourites.set(ui.draggable.attr("class").split(" ")[1], obj);
+                  renderFavourites();
+                }
+              });
+              favourites.forEach(function (obj, i) {
+                if (obj["id"] == ui.draggable.attr("class").split(" ")[1]) {
+                  favourites.delete(ui.draggable.attr("class").split(" ")[1]);
+                  localStorage.setItem(
+                    "favourites",
+                    JSON.stringify(Array.from(favourites))
+                  );
+                  renderFavourites();
+                }
+              });
+            },
+          });
+          //DRAG AND DROP REMOVE FROM FAVOURITES END
+        });
+      }
+
+      encodeURIComponent();
+      // AUTOCOMPLETE JQUERY WIDGET START
+      $(function () {
+        var autoComplete = [
+          "House",
+          "Flat",
+          "Detached",
+          "Terraced",
+          "Town house",
+          "Penthouse",
+        ];
+        $("#pType").autocomplete({
+          source: autoComplete,
+        });
+      });
+      // AUTOCOMPLETE JQUERY WIDGET END
+
+      var values = new Map();
+      var properties = new Map();
+      var found = new Array();
+      var favourites = new Map();
+
+      //DATE PICKER RANGE START
+      var fromDate = $("#fromDate").datepicker({ dateFormat: "yy-mm-dd" });
+      var toDate = $("#toDate").datepicker({ dateFormat: "yy-mm-dd" });
+      //DATE PICKER RANGE END
+
+      //SHORT HAND FOR $(document).ready(function(){...}); START
+      $(function () {
+        //SPINNER START
+        $("form input").each(function () {
+          if (
+            (this.name.slice(0, 1) == "l" || this.name.slice(0, 1) == "h") &&
+            this.name.slice(1) != "Added"
+          ) {
+            $(this).spinner();
+          }
+        });
+        //SPINNER END
+
+        //SEARCH button START
+        $(".search").button();
+        $(".search").on("click", function (e) {
+          e.preventDefault();
+          //empty the properties list
+          $("#pRList").empty();
+          values = new Map();
+          properties = new Map();
+          found = new Array();
+          addValues();
+          myFetch();
+        });
+        //SEARCH button END
+      });
+      //SHORT HAND FOR $(document).ready(function(){...}); END
+
+      //any element with the matching selector will be affected by the function
+      $(document).on("click", function (e) {
+        var target = $(e.target);
+        if (target.is(".add")) {
+          add(target);
+        } else if (target.is(".remove")) {
+          remove(target);
+        } else if (target.is(".read")) {
+          favourites = new Map(JSON.parse(localStorage.getItem("favourites")));
+          renderFavourites();
+        } else if (target.is(".store")) {
+          localStorage.setItem(
+            "favourites",
+            JSON.stringify(Array.from(favourites))
+          );
+        } else if (target.is(".clear")) {
+          favourites.clear();
+          localStorage.setItem(
+            "favourites",
+            JSON.stringify(Array.from(favourites))
+          );
+          renderFavourites();
+        }
+      });
+    </script>
+  </body>
+  <!-- DEVELOPED IN MICROSOFT EDGE END -->
+</html>
+<!-- 0 errors 21/12/2022 -->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Page</title>
+    <link href="../index.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Property Page START -->
+    <div class="propPage">
+      <a href="prop5.html" class="backBtn">❌</a>
+      <main class="propImages"></main>
+    </div>
+    <!-- Property Page END -->
+    <script>
+      var prop =
+        $(".propPage > a").attr("href").split(/(\d+)/)[0] +
+        $(".propPage > a").attr("href").split(/(\d+)/)[1];
+      for (i = 0; i < 7; i++) {
+        $(".propImages").append(
+          '<img class="propertyImageLargePage" alt="Property Image" src="../images/' +
+            prop +
+            "pic" +
+            (i + 1) +
+            'small.jpeg">'
+        );
+      }
+    </script>
+  </body>
+</html>
+<!-- 0 errors 21/12/2022 -->
