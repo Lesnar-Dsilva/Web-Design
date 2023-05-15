@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1 class="heading">To-Do List</h1>
+    <div class="addToList">
+      <input type="text" placeholder="Enter To-Do" class="input" />
+      <button type="button" class="add">+</button>
+    </div>
+    <div class="list"></div>
+    <script>
+      let items = [];
+      $(document).ready(function () {
+        $(".add").click(function () {
+          $(".list").text("");
+          if (!$(".input").val()) {
+            alert("Enter something");
+          } else {
+            items.push($(".input").val());
+          }
+          for (let i = 0; i < items.length; i++) {
+            $(".list").append(
+              `<div class="item item${i}"><button type="button" class="bin bin${i}">🗑️</button><span class="${i}">${items[i]}</span><button class="edit edit${i}">🖊️</button></div>` +
+                "<br>"
+            );
+          }
+        });
+        $(document).on("click", ".bin", function () {
+          items.splice(this.className.match(/\d+/)[0], 1);
+          $(".list").text("");
+          for (let i = 0; i < items.length; i++) {
+            $(".list").append(
+              `<div class="item item${i}"><button type="button" class="bin bin${i}">🗑️</button><span class="${i}">${items[i]}</span><button class="edit edit${i}">🖊️</button></div>` +
+                "<br>"
+            );
+          }
+        });
+        $(document).on("click", ".edit", function () {
+          let it = prompt("What should replace it?");
+          items[this.className.match(/\d+/)[0]] = it;
+          $(".list").text("");
+          for (let i = 0; i < items.length; i++) {
+            $(".list").append(
+              `<div class="item item${i}"><button type="button" class="bin bin${i}">🗑️</button><span class="${i}">${items[i]}</span><button class="edit edit${i}">🖊️</button></div>` +
+                "<br>"
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
